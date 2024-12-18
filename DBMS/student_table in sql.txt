@@ -1,0 +1,35 @@
+-- create table in sql (using CREATE, INSERT, ALTER, UPDATE, SELECT, DROP)
+
+-- CREATE TABLE Students (
+--     ID INTEGER PRIMARY KEY AUTOINCREMENT,
+--     FirstName varchar(25) NOT NULL,
+--     LastName varchar(25),
+--     Age int
+-- );
+
+-- INSERT INTO Students (FirstName, LastName, Age) VALUES ('Rahul', 'Kumar', 24);
+-- INSERT INTO Students (FirstName, LastName, Age) VALUES ('Aakash', 'Roy', 25);
+-- INSERT INTO Students (FirstName, LastName, Age) VALUES ('Nick', 'Chopra', 23);
+
+-- ALTER TABLE Students
+-- ADD Email varchar(20);
+
+-- UPDATE Students
+-- SET Email ="nickchopra123@gmail.com"
+-- WHERE ID = 9;
+
+-- ALTER TABLE Students
+-- ADD Gender VARCHAR(1);
+
+-- UPDATE Students
+-- SET Gender ="Male"
+-- WHERE Age = 23;
+
+-- ALTER TABLE Students
+-- ADD Batch VARCHAR(10);
+
+-- UPDATE Students
+-- SET Batch ="Morning"
+-- WHERE Age = 25;
+
+SELECT * FROM Students;

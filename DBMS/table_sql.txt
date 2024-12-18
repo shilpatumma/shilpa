@@ -1,0 +1,23 @@
+INSERT into students values (1,'shilpa', 'tumma', 'surat');
+INSERT into students values (2,'divya', 'patel', 'delhi');
+SELECT * FROM students;
+
+CREATE TABLE students (
+	StudentID INT PRIMARY KEY,
+  	first_name varchar(50),
+  	last_name varchar(50),
+  	city varchar(50)
+);
+
+
+
+
+
+
+CREATE TABLE patient(
+  	patientID int,
+  	first_name varchar(50),
+  	last_name varchar(50),
+  	age int,
+  	number int
+);

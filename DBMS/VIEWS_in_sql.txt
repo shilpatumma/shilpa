@@ -1,0 +1,32 @@
+-- VIEWS IN SQL :-->
+
+-- CREATE TABLE Student (
+--     ID INTEGER PRIMARY KEY AUTOINCREMENT,
+--     Name VARCHAR(10),
+--     Address VARCHAR (10)
+-- );
+
+-- INSERT INTO Student (Name, Address) VALUES ('Amita', 'Rajkot');
+-- INSERT INTO Student (Name, Address) VALUES ('Sneha', 'Surat');
+-- INSERT INTO Student (Name, Address) VALUES ('Prince', 'Mumbai');
+-- INSERT INTO Student (Name, Address) VALUES ('Daksh', 'Delhi');
+-- INSERT INTO Student (Name, Address) VALUES ('Meher', 'Junagadh');
+
+SELECT * FROM Student;
+
+
+-- CREATE VIEW student_detail AS
+-- SELECT Name, Address
+-- FROM Student
+-- WHERE ID < 5;
+
+-- SELECT * FROM student_detail;
+
+-- CREATE VIEW detail_about AS
+-- SELECT ID, Address, Name
+-- FROM Student
+-- ORDER By Name;
+
+SELECT * FROM detail_about;
+
+--DROP VIEW student_detail;

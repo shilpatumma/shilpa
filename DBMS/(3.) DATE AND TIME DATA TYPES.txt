@@ -1,0 +1,36 @@
+(3.) DATE AND TIME DATA TYPES (using DATE, TIME, DATETIME, TIMESTAMP, YEAR)
+
+-- CREATE TABLE Products (
+--     ID INTEGER PRIMARY KEY AUTOINCREMENT,
+--     ProductName VARCHAR(10),
+--     Purchasedate DATE,
+--     Purchasetime TIME
+-- );
+
+-- INSERT INTO Products (ProductName, Purchasedate, Purchasetime)
+--     VALUES('Laptop', '02/02/2023', '05:45:50');
+
+-- ALTER TABLE Products
+-- ADD login DATETIME;
+
+-- UPDATE Products
+-- SET login ='2022-04-22 10:34:53'
+-- WHERE ProductName = 'Laptop';
+
+-- ALTER TABLE Products
+-- ADD registeration TIMESTAMP;
+
+-- UPDATE Products
+-- SET registeration  ='2022-03-12 11:14:25'
+-- WHERE ProductName = 'Laptop';
+
+ALTER TABLE Products
+ADD Product_manufacturing_year YEAR;
+
+UPDATE Products
+SET Product_manufacturing_year ='2020'
+WHERE ProductName = 'Laptop';
+
+-- ALTER TABLE Products DROP Registered_at;  
+
+SELECT * FROM Products;

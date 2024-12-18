@@ -1,0 +1,39 @@
+(2). CHARACTER/STRING DATA TYPES  (using VARCHAR, CHAR, TEXT, ENUM, SET)
+
+-- CREATE TABLE Shirt (
+
+--     ID INTEGER PRIMARY KEY AUTOINCREMENT,   
+
+--     Brand VARCHAR(20),
+
+--     Shirt_for CHAR(6),
+
+--     Comment TEXT,
+
+--     size TEXT CHECK(size IN ('small', 'medium', 'large', 'x-large')),
+   --ENUM
+--     Color TEXT CHECK(Color IN ('Red', 'Green', 'White', 'Black')       --SET
+    -- );
+
+
+INSERT INTO Shirt (Brand, Shirt_for, Comment, size, Color)
+	VALUES ('AJIO', 'Female', 'Fully Sleeve Cotton Shirt', 'small', 'White');
+
+
+INSERT INTO Shirt (Brand, Shirt_for, Comment, size, Color) 
+    
+	VALUES ('MAX', 'Male', 'Fully Sleeve Cotton Shirt', 'medium', 'Red');
+
+
+INSERT INTO Shirt (Brand, Shirt_for, Comment, size, Color) 
+    
+	VALUES ('XYZ', 'Female', 'Fully Sleeve Cotton Shirt', 'x-large', 'Black');
+
+
+INSERT INTO Shirt (Brand, Shirt_for, Comment, size, Color) 
+    
+	VALUES ('ABC', 'Male', 'Fully Sleeve Cotton Shirt', 'large', 'Green');
+
+
+
+SELECT * FROM Shirt;

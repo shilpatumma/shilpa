@@ -1,0 +1,40 @@
+-- (1). NUMERIC DATA TYPES  [(1.) Integers (2.) Floating Point Numbers]
+
+-- CREATE TABLE Students (
+--     ID INTEGER PRIMARY KEY AUTOINCREMENT,
+--     Name varchar(25) NOT NULL,
+--    Percentage FLOAT
+-- );
+
+-- INSERT INTO Students (Name, Percentage) VALUES ('Rahul', 78.45);
+-- INSERT INTO Students (Name, Percentage) VALUES ('Aakash',  89.65);
+-- INSERT INTO Students (Name, Percentage) VALUES ('Nick', 91.34);
+
+-- SELECT * FROM Students;
+
+
+
+(1). Age = TINYINT (2, 3)
+(2). EmployeeID = SMALLINT (5)
+(3). Salary = MEDIUMINT (8)
+(4). Phone Number = INT (10)
+(5). Networth = BIGINT
+
+
+
+-- CREATE TABLE ITEmployees (
+--     Emp_no INTEGER PRIMARY KEY AUTOINCREMENT,
+--     EmpID SMALLINT ,
+--     Name varchar(25) NOT NULL,
+--     Age TINYINT,
+--     Salary MEDIUMINT,
+--     Networth BIGINT
+-- );
+
+INSERT INTO ITEmployees (EmpID, Name, Age, Salary, Networth) 
+    VALUES ('Rahul', 10000, 34,  10000000, 120000000);
+INSERT INTO ITEmployees (EmpID, Name, Age, Salary, Networth) VALUES ('Aakash',  89.65);
+INSERT INTO ITEmployees (EmpID, Name, Age, Salary, Networth) VALUES ('Nick', 91.34);
+
+SELECT * FROM ITEmployees;
+

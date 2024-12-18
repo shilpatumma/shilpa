@@ -1,0 +1,83 @@
+-- Inner Join :---->
+
+
+-- First Table :
+
+-- CREATE TABLE Student (
+--     ID INT PRIMARY KEY,
+--     Name VARCHAR(10)
+-- );
+
+-- INSERT INTO Student (Id, Name) VALUES (1, 'Dipali');
+-- INSERT INTO Student (Id, Name) VALUES (3, 'Surya');
+-- INSERT INTO Student (Id, Name) VALUES (4, 'Zeenal');
+-- INSERT INTO Student (Id, Name) VALUES (6, 'Mahek');
+-- INSERT INTO Student (Id, Name) VALUES (8, 'Lokesh');
+-- INSERT INTO Student (Id, Name) VALUES (7, 'Sneha');
+-- INSERT INTO Student (Id, Name) VALUES (9, 'Anjali');
+-- INSERT INTO Student (Id, Name) VALUES (2, 'Prince');
+
+-- SELECT * FROM Student;
+
+
+-- Second Table :
+
+-- CREATE TABLE Users (
+--     ID INT PRIMARY KEY,
+--     Name VARCHAR(10)
+-- );
+
+-- INSERT INTO Users (Id, Name) VALUES (1, 'Mishti');
+-- INSERT INTO Users (Id, Name) VALUES (10, 'Jenish');
+-- INSERT INTO Users (Id, Name) VALUES (4, 'Om');
+-- INSERT INTO Users (Id, Name) VALUES (26, 'Priyanka');
+-- INSERT INTO Users (Id, Name) VALUES (8, 'Rahul');
+-- INSERT INTO Users (Id, Name) VALUES (7, 'Umiya');
+-- INSERT INTO Users (Id, Name) VALUES (9, 'Ragini');
+-- INSERT INTO Users (Id, Name) VALUES (2, 'Tushar');
+
+-- SELECT * FROM Users;
+
+-- INNER JOIN :
+
+-- SELECT * FROM Student  INNER JOIN Users ON
+-- Student.ID = Users.ID
+
+
+-- LEFT OUTER JOIN :
+
+-- SELECT * FROM Student LEFT OUTER JOIN Users ON
+-- Student.ID = Users.ID
+
+
+-- RIGHT OUTER JOIN
+
+-- SELECT * FROM Student RIGHT OUTER JOIN Users ON
+-- Student.ID = Users.ID
+
+
+-- FULL OUTER JOIN
+
+-- SELECT * FROM Student FULL OUTER JOIN Users ON
+-- Student.ID = Users.ID
+
+
+-- Left Join Excluding Inner Join
+
+-- SELECT * FROM Student LEFT JOIN Users
+-- ON Student.ID = Users.ID
+-- WHERE Users.ID IS NULL
+
+
+-- Right Join Excluding Inner Join
+
+-- SELECT * FROM Student RIGHT JOIN Users
+-- ON Student.ID = Users.ID
+-- WHERE Student.ID IS NULL
+
+
+-- Full Outer Excluding Inner Join
+
+-- SELECT * FROM Student FULL OUTER JOIN Users
+-- ON Student.ID = Users.ID
+-- WHERE Student.ID IS NULL OR Users.ID IS NULL

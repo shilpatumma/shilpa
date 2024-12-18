@@ -1,0 +1,75 @@
+--wildcard in sql (using Percent (%)) :--
+
+
+-- Create the table
+CREATE TABLE Students (
+    user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR(100),
+    email VARCHAR(100),
+    date_of_birth DATE
+);
+
+-- Insert 50 sample records
+INSERT INTO Students (name, email, date_of_birth)
+VALUES 
+('John Doe', 'john.doe@example.com', '1990-05-15'),
+('Jane Smith', 'jane.smith@example.com', '1985-11-22'),
+('Mike Johnson', 'mike.johnson@example.com', '1988-03-10'),
+('Sara Williams', 'sara.williams@example.com', '1992-07-01'),
+('David Brown', 'david.brown@example.com', '1990-08-20'),
+('Emily Davis', 'emily.davis@example.com', '1995-09-12'),
+('James Wilson', 'james.wilson@example.com', '1983-12-02'),
+('Laura Martinez', 'laura.martinez@example.com', '1991-01-25'),
+('Chris Garcia', 'chris.garcia@example.com', '1994-06-30'),
+('Sophia Lee', 'sophia.lee@example.com', '1996-02-14'),
+('Oliver Harris', 'oliver.harris@example.com', '1989-04-10'),
+('Amelia Clark', 'amelia.clark@example.com', '1987-12-05'),
+('Elijah Lewis', 'elijah.lewis@example.com', '1993-07-30'),
+('Grace Walker', 'grace.walker@example.com', '1997-01-18'),
+('Benjamin Young', 'benjamin.young@example.com', '1986-10-25'),
+('Isabella Allen', 'isabella.allen@example.com', '1994-08-16'),
+('Alexander Scott', 'alexander.scott@example.com', '1991-02-11'),
+('Charlotte King', 'charlotte.king@example.com', '1992-05-23'),
+('Ethan Wright', 'ethan.wright@example.com', '1995-04-13'),
+('Mia Adams', 'mia.adams@example.com', '1993-11-17'),
+('Liam Baker', 'liam.baker@example.com', '1988-09-03'),
+('Harper Nelson', 'harper.nelson@example.com', '1996-10-29'),
+('Henry Carter', 'henry.carter@example.com', '1984-12-22'),
+('Zoe Mitchell', 'zoe.mitchell@example.com', '1990-06-05'),
+('Jack Perez', 'jack.perez@example.com', '1992-03-09'),
+('Lily Roberts', 'lily.roberts@example.com', '1989-08-20'),
+('Daniel Morgan', 'daniel.morgan@example.com', '1991-09-15'),
+('Ava Bell', 'ava.bell@example.com', '1994-05-25'),
+('William Parker', 'william.parker@example.com', '1990-11-12'),
+('Mason Evans', 'mason.evans@example.com', '1993-01-30'),
+('Ella Thomas', 'ella.thomas@example.com', '1995-08-03'),
+('Owen Garcia', 'owen.garcia@example.com', '1992-12-19'),
+('Harper Gonzalez', 'harper.gonzalez@example.com', '1996-04-26'),
+('Carter King', 'carter.king@example.com', '1985-02-18'),
+('Lucas Lee', 'lucas.lee@example.com', '1990-04-15'),
+('Amos Walker', 'amos.walker@example.com', '1997-06-21'),
+('Megan Harris', 'megan.harris@example.com', '1987-07-10'),
+('Riley Carter', 'riley.carter@example.com', '1992-09-02'),
+('Ella Robinson', 'ella.robinson@example.com', '1996-12-15'),
+('Jackson Wright', 'jackson.wright@example.com', '1994-11-03'),
+('Levi Clark', 'levi.clark@example.com', '1989-07-17'),
+('Sofia Turner', 'sofia.turner@example.com', '1993-05-08'),
+('Eli Cook', 'eli.cook@example.com', '1995-01-12'),
+('Victoria Campbell', 'victoria.campbell@example.com', '1994-09-30'),
+('Landon Bennett', 'landon.bennett@example.com', '1991-10-09'),
+('Hannah Perez', 'hannah.perez@example.com', '1986-04-22'),
+('Nolan Cooper', 'nolan.cooper@example.com', '1992-01-14'),
+('Chloe Murphy', 'chloe.murphy@example.com', '1997-05-19'),
+('Gabriel Howard', 'gabriel.howard@example.com', '1987-03-25'),
+('Grace Foster', 'grace.foster@example.com', '1995-02-04'),
+('Luna Cooper', 'luna.cooper@example.com', '1991-08-06'),
+('Sebastian Allen', 'sebastian.allen@example.com', '1989-11-29'),
+('Aiden Morris', 'aiden.morris@example.com', '1996-07-20');
+
+
+-- SELECT * FROM Students;
+
+
+-- SELECT * FROM Students
+-- WHERE name LIKE 'J%';
+
