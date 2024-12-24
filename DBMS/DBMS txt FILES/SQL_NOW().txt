@@ -1,0 +1,25 @@
+-- SQL NOW() :----->
+
+
+-- CREATE TABLE SALES (
+--     SaleID INTEGER PRIMARY KEY AUTOINCREMENT,
+--     Product VARCHAR (10),
+--     Quantity INT,
+--     Price INT
+-- );
+
+-- INSERT INTO SALES (Product, Quantity, Price) 
+--     VALUES ('Laptop', 2, 1000.20),
+--                     ('Smartphone', 5, 500.45),
+--                     ('Tablet', 3, 700.67),
+--                     ('Laptop', 1, 1100.89),
+--                     ('Smartphone', 4, 450.00),
+--                      ('Laptop', 2, NULL);
+
+SELECT * FROM SALES;
+
+--Looks like SQLite does not provide the now() function. 
+-- Can you try to replace now() by datetime('now') in ...
+
+SELECT Product, Price, datetime('now') FROM SALES;
+

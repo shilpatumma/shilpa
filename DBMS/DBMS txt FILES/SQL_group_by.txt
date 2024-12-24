@@ -1,0 +1,46 @@
+--- SQL GROUP BY :----->
+
+
+-- CREATE TABLE emp (
+--   emp_no INT PRIMARY KEY,
+--   name VARCHAR(50),
+--   sal DECIMAL(10,2),
+--   age INT
+-- );
+-- INSERT INTO emp (emp_no, name, sal, age) VALUES
+-- (1, 'Aarav', 50000.00, 25),
+-- (2, 'Aditi', 60000.50, 30),
+-- (3, 'Aarav', 75000.75, 35),
+-- (4, 'Anjali', 45000.25, 28),
+-- (5, 'Chetan', 80000.00, 32),
+-- (6, 'Divya', 65000.00, 27),
+-- (7, 'Gaurav', 55000.50, 29),
+-- (8, 'Divya', 72000.75, 31),
+-- (9, 'Gaurav', 48000.25, 26),
+-- (10, 'Divya', 83000.00, 33);
+SELECT * from emp;
+
+SELECT name, SUM(sal) FROM emp 
+GROUP BY name;
+
+SELECT NAME, SUM(sal) FROM Emp
+GROUP BY name
+HAVING SUM(sal)>90000;
+
+-- CREATE TABLE student (
+--   name VARCHAR(50),
+--   year INT,
+--   subject VARCHAR(50)
+-- );
+-- INSERT INTO student (name, year, subject) VALUES
+-- ('Alice', 1, 'Mathematics'),
+-- ('Bob', 2, 'English'),
+-- ('Charlie', 3, 'Science'),
+-- ('David', 1, 'Mathematics'),
+-- ('Emily', 2, 'English'),
+-- ('Frank', 3, 'Science');
+SELECT * from student;
+
+SELECT SUBJECT, YEAR, Count(*)
+FROM Student
+GROUP BY SUBJECT, YEAR;

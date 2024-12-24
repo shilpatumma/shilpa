@@ -1,0 +1,71 @@
+---- DELETEE TRIGGER  :----->
+
+
+
+-- CREATE TABLE salaries (  
+--     emp_num INT PRIMARY KEY,  
+--     valid_from DATE NOT NULL,  
+--     amount DEC(8 , 2 ) NOT NULL DEFAULT 0  
+-- );  
+
+-- INSERT INTO salaries (emp_num, valid_from, amount)  
+-- VALUES  
+--     (102, '2020-01-10', 45000),  
+--     (103, '2020-01-10', 65000),  
+--     (105, '2020-01-10', 55000),  
+--     (107, '2020-01-10', 70000),  
+--     (109, '2020-01-10', 40000);  
+
+-- SELECT * FROM salaries;
+
+-- CREATE TABLE total_salary_budget (  
+--     total_budget DECIMAL(10,2) NOT NULL  
+-- );  
+
+--  INSERT INTO total_salary_budget (total_budget)  
+-- SELECT SUM(amount) FROM salaries;  
+
+-- SELECT * FROM total_salary_budget;
+
+-- CREATE TRIGGER after_delete_salaries  
+-- AFTER DELETE  
+-- ON salaries FOR EACH ROW  
+-- BEGIN  
+--    UPDATE total_salary_budget SET total_budget = total_budget - old.amount;  
+-- END;
+
+-- DELETE FROM salaries WHERE emp_num = 105;  
+
+
+
+
+
+
+-- CREATE TABLE Students (
+--    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+--     Name VARCHAR (10),
+--     Marks INT
+-- );
+--  INSERT INTO Students (Name, Marks) VALUES 
+--      ('Ketan', 90),
+--     ('Sneha', 80),
+--     ('Divya', 70),
+--     ('Manek', 95),
+--     ('Priyal', 85);
+SELECT * FROM Students;
+
+-- CREATE TABLE total_marks (
+--   Total_Marks INT  
+-- );
+-- INSERT INTO total_marks (Total_Marks)
+-- SELECT SUM(marks) FROM Students; 
+SELECT * FROM total_marks;
+
+-- CREATE TRIGGER del_marks
+-- AFTER DELETE 
+-- ON Students FOR EACH ROW 
+-- BEGIN
+--     UPDATE total_marks SET Total_Marks = Total_Marks - old.marks;
+-- END;
+
+-- DELETE FROM Students WHERE marks > 90;

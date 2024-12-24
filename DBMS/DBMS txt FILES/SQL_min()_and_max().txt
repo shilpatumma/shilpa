@@ -1,0 +1,37 @@
+-- SQL MIN AND MAX FUNCTION :----->
+
+
+
+
+-- CREATE TABLE Students (
+--     ID INTEGER PRIMARY KEY AUTOINCREMENT,
+--     Name VARCHAR (10),
+--     Department VARCHAR (10),
+--     Status  VARCHAR (10), 
+--     Age INT
+-- );
+
+-- INSERT INTO Students (Name, Department, Status, Age) VALUES 
+--     ('Kinjal', 'Science', 'Active', 21),
+--     ('Manisha', 'Arts', 'Inactive', 22),
+--     ('Ishan', 'Commerce', 'Active', 23),
+--     ('Mayur', 'Science', 'Active', 21),
+--     ('Keyur', 'Science', 'Inactive', 23),
+--     ('Priyal', 'Commerce', 'Active', 23);
+
+SELECT * FROM Students;
+
+-- SQL MIN() function
+-- SELECT MIN(Age) FROM Students;
+
+-- SQL MAX() function
+-- SELECT MAX(Age) FROM Students;
+
+-- Using MIN() and MAX() with Other Columns
+-- SELECT Name, MIN(Age) AS Min_Age  FROM Students;
+-- SELECT Name, MAX(Age) AS Max_Age  FROM Students;
+
+-- Using MIN() and MAX() with Other Columns
+-- SELECT Name,  MAX(Age) AS Max_Age 
+-- FROM Students
+-- HAVING MAX(Age) > 21;

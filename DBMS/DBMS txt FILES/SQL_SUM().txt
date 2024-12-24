@@ -1,0 +1,48 @@
+--- SQL SUM function :----->
+
+
+-- CREATE TABLE SALES (
+--     SaleID INTEGER PRIMARY KEY AUTOINCREMENT,
+--     Product VARCHAR (10),
+--     Quantity INT,
+--     Price INT
+-- );
+
+-- INSERT INTO SALES (Product, Quantity, Price) 
+--     VALUES ('Laptop', 2, 1000),
+--                     ('Smartphone', 5, 500),
+--                     ('Tablet', 3, 700),
+--                     ('Laptop', 1, 1100),
+--                     ('Smartphone', 4, 450),
+--                      ('Laptop', 2, NULL);
+
+SELECT * FROM SALES;
+
+
+-- Using SUM() with One Column
+-- SELECT SUM(Price) AS Total_Sum_Of_Price FROM SALES;
+
+
+
+-- Using SUM() with an Expression
+-- SELECT SUM(Quantity * Price) AS Sum_Of_Quantity_and_price FROM SALES;
+
+
+
+-- Using SUM() with GROUP BY
+-- SELECT Product, SUM(Quantity) AS Total_Quantity 
+--     FROM SALES
+--     GROUP BY Product;
+
+
+
+-- Using SUM() with DISTINCT
+-- SELECT SUM(DISTINCT Price) AS Total_price FROM SALES;
+
+
+
+-- Using SUM() with HAVING
+-- SELECT Product, SUM(Price) AS Total_Price
+-- FROM SALES
+-- GROUP BY Product
+-- HAVING SUM(Price) > 800;

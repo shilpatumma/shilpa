@@ -1,0 +1,22 @@
+--- SQL WHERE WITH LIKE :---->
+
+
+-- CREATE TABLE Emp1 (
+--     EmpID INT PRIMARY KEY,
+--     Name VARCHAR(50),
+--     Country VARCHAR(50),
+--     Age int(2),
+--     mob int(10)
+-- );
+
+-- INSERT INTO Emp1 (EmpID, Name,Country, Age, mob)
+-- VALUES (1, 'Shubham',  'India','23','738479734'),
+--                (2, 'Aman ',  'Australia','21','436789555'),
+--                (3, 'Naveen', 'Sri lanka','24','34873847'),
+--                (4, 'Aditya',  'Austria','21','328440934'),
+--                (5, 'Nishant', 'Spain','22','73248679');
+SELECT * FROM Emp1;
+
+SELECT * FROM Emp1 WHERE Name LIKE 'S%'; 
+
+SELECT * FROM Emp1 WHERE Name LIKE '%t%'; 

@@ -1,0 +1,116 @@
+CREATE TABLE Diamonds (
+    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+    carat FLOAT,
+    cut INT,
+    color VARCHAR(10),
+    clarity VARCHAR(10),
+    depth FLOAT,
+    table_ FLOAT,
+    price INT
+);
+
+
+
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.23, 5, 'E', 'SI2', 61.5, 55.0, 326);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.21, 4, 'E', 'SI1', 59.8, 61.0, 326);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.23, 2, 'E', 'VS1', 56.9, 65.0, 327);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.29, 4, 'I', 'VS2', 62.4, 58.0, 334);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.31, 2, 'J', 'SI2', 63.3, 58.0, 335);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.24, 3, 'J', 'VVS2', 62.8, 57.0, 336);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.24, 3, 'I', 'VVS1', 62.3, 57.0, 336);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.26, 3, 'H', 'SI1', 61.9, 55.0, 337);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.22, 1, 'E', 'VS2', 65.1, 61.0, 337);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.23, 3, 'H', 'VS1', 59.4, 61.0, 338);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.3, 2, 'J', 'SI1', 64.0, 55.0, 339);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.23, 5, 'J', 'VS1', 62.8, 56.0, 340);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.22, 4, 'F', 'SI1', 60.4, 61.0, 342);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.31, 5, 'J', 'SI2', 62.2, 54.0, 344);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.2, 4, 'E', 'SI2', 60.2, 62.0, 345);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.32, 4, 'E', 'I1', 60.9, 58.0, 345);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.3, 5, 'I', 'SI2', 62.0, 54.0, 348);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.3, 2, 'J', 'SI1', 63.4, 54.0, 351);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.3, 2, 'J', 'SI1', 63.8, 56.0, 351);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.3, 3, 'J', 'SI1', 62.7, 59.0, 351);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.3, 2, 'I', 'SI2', 63.3, 56.0, 351);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.23, 3, 'E', 'VS2', 63.8, 55.0, 352);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.23, 3, 'H', 'VS1', 61.0, 57.0, 353);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.31, 3, 'J', 'SI1', 59.4, 62.0, 353);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.31, 3, 'J', 'SI1', 58.1, 62.0, 353);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.23, 3, 'G', 'VVS2', 60.4, 58.0, 354);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.24, 4, 'I', 'VS1', 62.5, 57.0, 355);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.3, 3, 'J', 'VS2', 62.2, 57.0, 357);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.23, 3, 'D', 'VS2', 60.5, 61.0, 357);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.23, 3, 'F', 'VS1', 60.9, 57.0, 357);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.23, 3, 'F', 'VS1', 60.0, 57.0, 402);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.23, 3, 'F', 'VS1', 59.8, 57.0, 402);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.23, 3, 'E', 'VS1', 60.7, 59.0, 402);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.23, 3, 'E', 'VS1', 59.5, 58.0, 402);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.23, 3, 'D', 'VS1', 61.9, 58.0, 402);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.23, 2, 'F', 'VS1', 58.2, 59.0, 402);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.23, 2, 'E', 'VS1', 64.1, 59.0, 402);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.31, 2, 'H', 'SI1', 64.0, 54.0, 402);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.26, 3, 'D', 'VS2', 60.8, 59.0, 403);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.33, 5, 'I', 'SI2', 61.8, 55.0, 403);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.33, 5, 'I', 'SI2', 61.2, 56.0, 403);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.33, 5, 'J', 'SI1', 61.1, 56.0, 403);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.26, 2, 'D', 'VS2', 65.2, 56.0, 403);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.26, 2, 'D', 'VS1', 58.4, 63.0, 403);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.32, 2, 'H', 'SI2', 63.1, 56.0, 403);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.29, 4, 'F', 'SI1', 62.4, 58.0, 403);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.32, 3, 'H', 'SI2', 61.8, 55.0, 403);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.32, 2, 'H', 'SI2', 63.8, 56.0, 403);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.25, 3, 'E', 'VS2', 63.3, 60.0, 404);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.29, 3, 'H', 'SI2', 60.7, 60.0, 404);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.24, 3, 'F', 'SI1', 60.9, 61.0, 404);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.23, 5, 'G', 'VS1', 61.9, 54.0, 404);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.32, 5, 'I', 'SI1', 60.9, 55.0, 404);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.22, 4, 'E', 'VS2', 61.6, 58.0, 404);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.22, 4, 'D', 'VS2', 59.3, 62.0, 404);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.3, 5, 'I', 'SI2', 61.0, 59.0, 405);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.3, 4, 'J', 'SI2', 59.3, 61.0, 405);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.3, 3, 'I', 'SI1', 62.6, 57.0, 405);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.3, 3, 'I', 'SI1', 63.0, 57.0, 405);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.3, 2, 'I', 'SI1', 63.2, 55.0, 405);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.35, 5, 'I', 'VS1', 60.9, 57.0, 552);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.3, 4, 'D', 'SI1', 62.6, 59.0, 552);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.3, 5, 'D', 'SI1', 62.5, 57.0, 552);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.3, 5, 'D', 'SI1', 62.1, 56.0, 552);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.42, 4, 'I', 'SI2', 61.5, 59.0, 552);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.28, 5, 'G', 'VVS2', 61.4, 56.0, 553);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.32, 5, 'I', 'VVS1', 62.0, 55.3, 553);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.31, 3, 'G', 'SI1', 63.3, 57.0, 553);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.31, 4, 'G', 'SI1', 61.8, 58.0, 553);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.24, 4, 'E', 'VVS1', 60.7, 58.0, 553);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.24, 3, 'D', 'VVS1', 61.5, 60.0, 553);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.3, 3, 'H', 'SI1', 63.1, 56.0, 554);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.3, 4, 'H', 'SI1', 62.9, 59.0, 554);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.3, 4, 'H', 'SI1', 62.5, 57.0, 554);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.3, 2, 'H', 'SI1', 63.7, 57.0, 554);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.26, 3, 'F', 'VVS2', 59.2, 60.0, 554);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.26, 3, 'E', 'VVS2', 59.9, 58.0, 554);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.26, 3, 'D', 'VVS2', 62.4, 54.0, 554);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.26, 3, 'D', 'VVS2', 62.8, 60.0, 554);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.26, 3, 'E', 'VVS1', 62.6, 59.0, 554);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.26, 3, 'E', 'VVS1', 63.4, 59.0, 554);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.26, 3, 'D', 'VVS1', 62.1, 60.0, 554);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.26, 5, 'E', 'VVS2', 62.9, 58.0, 554);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.38, 5, 'I', 'SI2', 61.6, 56.0, 554);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.26, 2, 'E', 'VVS1', 57.9, 60.0, 554);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.24, 4, 'G', 'VVS1', 62.3, 59.0, 554);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.24, 4, 'H', 'VVS1', 61.2, 58.0, 554);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.24, 4, 'H', 'VVS1', 60.8, 59.0, 554);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.24, 4, 'H', 'VVS2', 60.7, 58.0, 554);
+-- INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.32, 4, 'I', 'SI1', 62.9, 58.0, 554);
+INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.7, 5, 'E', 'SI1', 62.5, 57.0, 2757);
+INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.86, 1, 'E', 'SI2', 55.1, 69.0, 2757);
+INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.7, 5, 'G', 'VS2', 61.6, 56.0, 2757);
+INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.71, 3, 'E', 'VS2', 62.4, 57.0, 2759);
+INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.78, 3, 'G', 'SI2', 63.8, 56.0, 2759);
+INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.7, 2, 'E', 'VS2', 57.5, 58.0, 2759);
+INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.7, 2, 'F', 'VS1', 59.4, 62.0, 2759);
+INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.96, 1, 'F', 'SI2', 66.3, 62.0, 2759);
+INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.73, 3, 'E', 'SI1', 61.6, 59.0, 2760);
+INSERT INTO diamonds (carat, cut, color, clarity, depth, table_, price) VALUES (0.8, 4, 'H', 'SI1', 61.5, 58.0, 2760);
+
+
+select * from Diamonds;

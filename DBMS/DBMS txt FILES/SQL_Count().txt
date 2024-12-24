@@ -1,0 +1,89 @@
+--- SQL COUNT():----->
+
+
+-- CREATE TABLE Students (
+--     ID INTEGER PRIMARY KEY AUTOINCREMENT,
+--     Name VARCHAR (10),
+--     Department VARCHAR (10),
+--     Status  VARCHAR (10)
+-- );
+
+-- INSERT INTO Students (Name, Department, Status) VALUES 
+--     ('Kinjal', 'Science', 'Active'),
+--     ('Manisha', 'Arts', 'Inactive'),
+--     ('Ishan', 'Commerce', 'Active'),
+--     ('Mayur', 'Science', 'Active'),
+--     ('Keyur', 'Science', 'Inactive'),
+--     ('Priyal', 'Commerce', 'Active');
+
+SELECT * FROM Students;
+
+
+
+-- Count All Rows in the Employees Table
+
+-- SELECT COUNT (*) AS TotalRows
+-- FROM Students;
+
+
+
+-- Count Distinct Values in the Department Column
+
+-- SELECT COUNT (DISTINCT Status) AS CheckStatus
+-- FROM Students;
+
+-- SELECT COUNT (DISTINCT Department) AS TotalDepartment
+-- FROM Students;
+
+
+
+-- Count Rows where the Status is ‘Active’
+
+SELECT COUNT (DISTINCT Status) AS CheckStatus
+FROM Students;
+
+
+
+-- Count Rows where the Status is ‘Active’
+
+SELECT COUNT (*) AS CheckStatus
+    FROM Students
+    WHERE Status = 'Inactive';
+
+SELECT COUNT (*) AS CheckStatus
+    FROM Students
+    WHERE Status = 'Active';
+
+
+
+
+
+
+-- Using COUNT() with SUM() and AVG() :=====>
+
+
+
+
+-- CREATE TABLE SALES (
+--     SaleID INTEGER PRIMARY KEY AUTOINCREMENT,
+--     Product VARCHAR (10),
+--     Quantity INT,
+--     Price INT
+-- );
+
+-- INSERT INTO SALES (Product, Quantity, Price) 
+--     VALUES ('Laptop', 2, 1000),
+--                     ('Smartphone', 5, 500),
+--                     ('Tablet', 3, 700),
+--                     ('Laptop', 1, 1100),
+--                     ('Smartphone', 4, 450),
+--                      ('Laptop', 2, NULL);
+
+SELECT * FROM SALES;
+
+-- Using COUNT() with SUM() and AVG()
+
+SELECT Product, COUNT(*) AS TotalProduct, 
+            SUM(Price) AS TotalPrice, AVG(Price) AS AveragePrice
+FROM SALES
+GROUP BY Product;

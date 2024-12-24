@@ -1,0 +1,24 @@
+-- SQL LEN() ------>
+
+
+-- CREATE TABLE SALES (
+--     SaleID INTEGER PRIMARY KEY AUTOINCREMENT,
+--     Product VARCHAR (10),
+--     Quantity INT,
+--     Price INT
+-- );
+
+-- INSERT INTO SALES (Product, Quantity, Price) 
+--     VALUES ('Laptop', 2, 1000),
+--                     ('Smartphone', 5, 500),
+--                     ('Tablet', 3, 700),
+--                     ('Laptop', 1, 1100),
+--                     ('Smartphone', 4, 450),
+--                      ('Laptop', 2, NULL);
+
+-- SELECT * FROM SALES;
+
+-- MySQL doesn't have a built-in CHARINDEX() function.
+-- Instead you can use LOCATE equivalent to charindex ,and instead of LEN you can use LENGTH.
+
+-- SELECT LENGTH(Product) as Length_Of_Product FROM SALES;

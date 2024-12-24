@@ -1,0 +1,62 @@
+--- AVG() Function in SQL Server  :----->
+
+
+-- CREATE TABLE SALES (
+--     SaleID INTEGER PRIMARY KEY AUTOINCREMENT,
+--     Product VARCHAR (10),
+--     Quantity INT,
+--     Price INT
+-- );
+
+-- INSERT INTO SALES (Product, Quantity, Price) 
+--     VALUES ('Laptop', 2, 1000),
+--                     ('Smartphone', 5, 500),
+--                     ('Tablet', 3, 700),
+--                     ('Laptop', 1, 1100),
+--                     ('Smartphone', 4, 450),
+--                      ('Laptop', 2, NULL);
+SELECT * FROM SALES;
+
+-- SELECT AVG(Price) AS AveragePrice
+-- FROM SALES;
+
+
+
+-- Using SQL Server AVG() with GROUP BY
+
+-- SELECT Product, AVG(Price) AS AvgPrice
+-- FROM SALES
+-- GROUP BY Product;
+
+
+
+-- Using SQL Server AVG() in HAVING Clause
+
+-- SELECT Product, AVG(Price) AS AvgPrice
+-- FROM SALES
+-- GROUP BY Product
+-- HAVING AVG(Price) > 500;
+
+
+
+-- AVG() Function with WHERE Clause
+
+SELECT AVG(Price) AS AveragePrice
+FROM Sales
+WHERE Quantity >= 4;
+
+
+
+-- AVG() Function with ORDER BY Clause
+
+SELECT Product, AVG(Price) AS AvgPrice
+FROM SALES
+GROUP BY Product
+ORDER BY AVG(Price);
+
+
+
+-- AVG() Function with DISTINCT Clause
+
+SELECT AVG(DISTINCT Price) AS AvgPrice 
+FROM SALES;

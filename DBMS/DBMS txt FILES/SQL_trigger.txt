@@ -1,0 +1,32 @@
+-- TRIGGER :-----
+
+
+-- CREATE TABLE Persons (
+--     P_ID INTEGER PRIMARY KEY AUTOINCREMENT,
+--     P_Name VARCHAR (10),
+--     P_CIty VARCHAR (10),
+--     P_Age INT
+-- );
+-- INSERT INTO Persons (P_Name, P_city, P_Age) VALUES 
+-- ('Shruti', 'Surat', 23),
+-- ('Mahek', 'Mumbai', 25),
+-- ('Sanjay', 'Surat', 29),
+-- ('Jyoti', 'bhavnagr', 31),
+-- ('Divya', 'Junagadh', 29),
+-- ('Hemant', 'Surat', 23),
+-- ('yug', 'Surat', 28),
+-- ('Tushar', 'Delhi', 33);
+SELECT * FROM Persons;
+
+-- CREATE TRIGGER temperory1
+-- AFTER UPDATE ON Persons
+-- FOR EACH ROW 
+-- WHEN new.P_Age < 30
+-- BEGIN 
+--     UPDATE Persons
+--     SET P_Name = 'Updated Name'  
+--     WHERE P_Age = new.P_Age;
+-- END;
+
+-- UPDATE Persons  
+-- SET P_Name = 'Updated Name'  WHERE P_Age < 30

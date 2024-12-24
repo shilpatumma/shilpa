@@ -1,0 +1,57 @@
+-- Create Students table
+CREATE TABLE Students (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    age INT
+);
+
+-- Create DeletedStudents table
+CREATE TABLE DeletedStudents (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    age INT,
+    deleted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create StudentLog table
+CREATE TABLE StudentLog (
+    log_id INT PRIMARY KEY AUTO_INCREMENT,
+    operation VARCHAR(50),
+    table_name VARCHAR(50),
+    student_id INT,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+INSERT INTO Students (id, name, age)
+VALUES (1, 'John Doe', 20),
+       (2, 'Jane Smith', 22),
+       (3, 'Emily Brown', 19);
+
+
+-- Start transaction
+BEGIN TRANSACTION;
+
+-- Store the deleted student in DeletedStudents
+INSERT INTO DeletedStudents (id, name, age)
+SELECT id, name, age
+FROM Students
+WHERE id = 1;
+
+-- Delete the student from Students table
+DELETE FROM Students
+WHERE id = 1;
+
+-- Log the deletion in StudentLog table
+INSERT INTO StudentLog (operation, table_name, student_id)
+VALUES ('DELETE', 'Students', 1);
+
+-- Commit transaction
+COMMIT;
+
+
+-- Restore deleted student
+INSERT INTO Students (id, name, age)
+SELECT id, name, age
+FROM DeletedStudents
+WHERE id = 1;

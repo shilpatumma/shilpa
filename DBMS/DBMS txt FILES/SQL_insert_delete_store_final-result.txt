@@ -1,0 +1,48 @@
+--- INSERT, DELETE AND STORE DELETED ROW IN THIRD TABLE :----> (TRIGGER IN SQL)
+
+
+
+-- CREATE TABLE Students (
+--    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+--     Name VARCHAR (10),
+--     Marks INT
+-- );
+--  INSERT INTO Students (Name, Marks) VALUES 
+--      ('Ketan', 90),
+--     ('Sneha', 80),
+--     ('Divya', 70),
+--     ('Manek', 95),
+--     ('Priyal', 85);
+SELECT * FROM Students;
+
+-- CREATE TABLE total_marks (
+--   Total_Marks INT  
+-- );
+-- INSERT INTO total_marks (Total_Marks)
+-- SELECT SUM(marks) FROM Students; 
+SELECT * FROM total_marks;
+
+-- CREATE TABLE del_stu_list (
+--     ID INTEGER PRIMARY KEY AUTOINCREMENT,
+--     Name VARCHAR (10),
+--     Marks INT
+-- );
+SELECT * FROM del_stu_list;
+
+SELECT SUM(Marks) AS Final_Result FROM Students;
+-- CREATE TRIGGER before_delete_trigger 
+-- BEFORE DELETE ON Students FOR EACH ROW
+-- BEGIN
+--      INSERT INTO del_stu_list VALUES  (OLD.ID, OLD.Name, OLD.Marks);
+-- END;
+
+-- DELETE FROM Students WHERE marks > 90;
+
+-- CREATE TRIGGER del_marks
+-- AFTER DELETE 
+-- ON Students FOR EACH ROW 
+-- BEGIN
+--     UPDATE total_marks SET Total_Marks = Total_Marks - old.marks;
+-- END;
+
+-- DELETE FROM Students WHERE marks > 90;
